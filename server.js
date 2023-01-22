@@ -8,6 +8,7 @@ const app = express()
 const port = process.env.PORT || 5001
 
 /* middlewares */
+app.use(express.json())
 app.use(logger('dev'))
 app.use('/api/contacts', require('./routes/contactRoutes'))
 
