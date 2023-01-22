@@ -3,8 +3,11 @@ console.clear()
 const logger = require('morgan')
 const express = require('express')
 const errorHandler = require('./middleware/errorHandler')
+const connectDb = require('./config/connectDb')
 require('./scripts/colors')
 require('dotenv').config()
+/* connecting to db before express() */
+connectDb()
 const app = express()
 const port = process.env.PORT || 5001
 

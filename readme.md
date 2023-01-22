@@ -18,3 +18,14 @@ router.route('/:id').get(getContact).put(updateContact).delete(deleteContact)
 
 - Insomnia Constants
   - 400 Bad Request
+  - 404 Not Found
+
+```JS
+console.log('Database connected: ', connect.connection.host, connect.connection.name);
+/*
+  This is how the output looks like:
+  Database connected:  ac-rkoloom-shard-00-02.iep1aum.mongodb.net mycontacts-backend
+*/
+```
+
+- One of my intial mistakes was, I was using a PATCH request instead of PUT request when updating a record
