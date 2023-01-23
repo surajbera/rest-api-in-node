@@ -15,6 +15,7 @@ const port = process.env.PORT || 5001
 app.use(express.json())
 app.use(logger('dev'))
 app.use('/api/contacts', require('./routes/contactRoutes'))
+app.use('/api/users', require('./routes/userRoutes'))
 /* error handler middleware */
 app.use(errorHandler)
 
